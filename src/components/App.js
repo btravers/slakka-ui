@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react"
 
-import ChannelsList from './ChannelsList'
-import Main from './Main'
-import styles from './styles'
+import ChannelsList from "./ChannelsList"
+import Main from "./Main"
+import styles from "./styles"
 
 const App = () => {
   return (

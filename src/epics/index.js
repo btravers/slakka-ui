@@ -1,9 +1,6 @@
-import { combineEpics } from 'redux-observable'
+import { combineEpics } from "redux-observable"
 
-import fetchChannelsEpic from './fetchChannelsEpic'
-import postMessageEpic from './postMessageEpic'
+import fetchChannelsEpic from "./fetchChannelsEpic"
+import postMessageEpic from "./postMessageEpic"
 
-export default combineEpics(
-    fetchChannelsEpic,
-    postMessageEpic,
-)
+export default combineEpics(fetchChannelsEpic, postMessageEpic)

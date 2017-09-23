@@ -1,5 +1,5 @@
 export default {
-    container: {
-        flexShrink: 0,
-    }
+  container: {
+    flexShrink: 0,
+  },
 }

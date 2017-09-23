@@ -1,1 +1,1 @@
-export { default } from './ChannelsListContainer'
+export { default } from "./ChannelsListContainer"

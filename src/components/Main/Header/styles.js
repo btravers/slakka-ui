@@ -1,6 +1,6 @@
 export default {
-    container: {
-        flexBasis: 53,
-        zIndex: 200
-    }
+  container: {
+    flexBasis: 53,
+    zIndex: 200,
+  },
 }
