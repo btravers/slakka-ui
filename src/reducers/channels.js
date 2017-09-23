@@ -1,4 +1,4 @@
-import { FETCH_CHANNELS_FULFILLED } from "actions"
+import { FETCH_CHANNELS_FULFILLED } from 'actions'
 
 export default (state = [], action) => {
   switch (action.type) {

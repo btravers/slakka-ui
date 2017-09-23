@@ -1,6 +1,6 @@
-import React, { PureComponent } from "react"
+import React, { PureComponent } from 'react'
 
-import styles from "./styles"
+import styles from './styles'
 
 class Channel extends PureComponent {
   handleClick = () => {

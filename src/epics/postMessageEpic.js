@@ -1,7 +1,7 @@
-import { ajax } from "rxjs/observable/dom/ajax"
+import { ajax } from 'rxjs/observable/dom/ajax'
 
-import { POST_MESSAGE } from "actions"
-import { getCurrentChannel } from "selectors"
+import { POST_MESSAGE } from 'actions'
+import { getCurrentChannel } from 'selectors'
 
 export default (action$, { getState }) =>
   action$
@@ -11,6 +11,6 @@ export default (action$, { getState }) =>
         .REACT_APP_SERVER_PORT}/channels/${getCurrentChannel(
         getState()
       )}/messages`
-      return ajax.post(url, payload, { "Content-Type": "application/json" })
+      return ajax.post(url, payload, { 'Content-Type': 'application/json' })
     })
     .ignoreElements()

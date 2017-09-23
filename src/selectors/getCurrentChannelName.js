@@ -1,6 +1,6 @@
-import { createSelector } from "reselect"
+import { createSelector } from 'reselect'
 
-import { getChannels, getCurrentChannel } from "selectors"
+import { getChannels, getCurrentChannel } from 'selectors'
 
 export const getCurrentChannelName = createSelector(
   getChannels,

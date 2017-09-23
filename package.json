@@ -43,7 +43,7 @@
   },
   "lint-staged": {
     "*.{js,json,css}": [
-      "prettier --write --no-semi --trailing-comma es5",
+      "prettier --write --no-semi --single-quote --trailing-comma es5",
       "git add"
     ]
   }

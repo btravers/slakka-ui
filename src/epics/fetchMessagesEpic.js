@@ -1,6 +1,6 @@
-import { ajax } from "rxjs/observable/dom/ajax"
+import { ajax } from 'rxjs/observable/dom/ajax'
 
-import { fetchMessagesFulfilled, FETCH_MESSAGES } from "actions"
+import { fetchMessagesFulfilled, FETCH_MESSAGES } from 'actions'
 
 export default action$ =>
   action$

@@ -1,8 +1,8 @@
-import React from "react"
-import map from "lodash/map"
+import React from 'react'
+import map from 'lodash/map'
 
-import Message from "./Message"
-import styles from "./styles"
+import Message from './Message'
+import styles from './styles'
 
 const Messages = ({ messages }) => {
   return (

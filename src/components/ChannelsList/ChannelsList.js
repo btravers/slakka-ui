@@ -1,8 +1,8 @@
-import React from "react"
-import map from "lodash/map"
+import React from 'react'
+import map from 'lodash/map'
 
-import Channel from "./Channel"
-import styles from "./styles"
+import Channel from './Channel'
+import styles from './styles'
 
 const ChannelsList = ({ channels }) => {
   return (

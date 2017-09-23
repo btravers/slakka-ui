@@ -1,6 +1,6 @@
-import { ajax } from "rxjs/observable/dom/ajax"
+import { ajax } from 'rxjs/observable/dom/ajax'
 
-import { fetchChannelsFulfilled, FETCH_CHANNELS } from "actions"
+import { fetchChannelsFulfilled, FETCH_CHANNELS } from 'actions'
 
 export default action$ =>
   action$

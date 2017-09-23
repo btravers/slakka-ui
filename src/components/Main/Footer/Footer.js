@@ -1,11 +1,11 @@
-import React, { PureComponent } from "react"
-import { Input } from "semantic-ui-react"
+import React, { PureComponent } from 'react'
+import { Input } from 'semantic-ui-react'
 
-import styles from "./styles"
+import styles from './styles'
 
 class Footer extends PureComponent {
   state = {
-    value: "",
+    value: '',
   }
 
   handleChange = (event, { value }) => {
@@ -16,10 +16,10 @@ class Footer extends PureComponent {
 
   handleKeyDown = ({ nativeEvent: { key } }) => {
     const { value } = this.state
-    if (value && key === "Enter") {
+    if (value && key === 'Enter') {
       const { postMessage } = this.props
       postMessage(value)
-      this.setState({ value: "" })
+      this.setState({ value: '' })
     }
   }
 

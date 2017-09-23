@@ -1,9 +1,9 @@
-import React from "react"
+import React from 'react'
 
-import Header from "./Header"
-import Messages from "./Messages"
-import Footer from "./Footer"
-import styles from "./styles"
+import Header from './Header'
+import Messages from './Messages'
+import Footer from './Footer'
+import styles from './styles'
 
 const Main = () => {
   return (
