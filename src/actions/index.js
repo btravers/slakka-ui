@@ -1,3 +1,4 @@
+export * from './addMessage'
 export * from './fetchChannels'
 export * from './fetchChannelsFulfilled'
 export * from './fetchMessages'
