@@ -6,7 +6,7 @@ import { setCurrentChannel } from 'actions'
 
 const mapStateToProps = (state, { id }) => {
   return {
-    isSelected: getCurrentChannel(state).id === id,
+    isSelected: getCurrentChannel(state) === id,
   }
 }
 

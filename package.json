@@ -46,5 +46,13 @@
       "prettier --write --no-semi --single-quote --trailing-comma es5",
       "git add"
     ]
+  },
+  "proxy": {
+    "/api": {
+      "target": "http://localhost:8080/",
+      "pathRewrite": {
+        "^/api": ""
+      }
+    }
   }
 }

@@ -1,15 +1,17 @@
 import { ajax } from 'rxjs/observable/dom/ajax'
 
-import { fetchMessagesFulfilled, FETCH_MESSAGES } from 'actions'
+import { fetchMessagesFulfilled, SET_CURRENT_CHANNEL } from 'actions'
 import { getCurrentChannel } from 'selectors'
+import config from 'config'
+
+const { serverHost: host, serverPort: port } = config
 
 export default (action$, { getState }) =>
   action$
-    .ofType(FETCH_MESSAGES)
+    .ofType(SET_CURRENT_CHANNEL)
     .mergeMap(() =>
       ajax.getJSON(
-        `http://${process.env.REACT_APP_SERVER_HOST}:${process.env
-          .REACT_APP_SERVER_PORT}/channels/${getCurrentChannel(
+        `http://${host}:${port}/api/channels/${getCurrentChannel(
           getState()
         )}/messages`
       )

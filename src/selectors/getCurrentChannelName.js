@@ -1,9 +1,11 @@
 import { createSelector } from 'reselect'
+import get from 'lodash/get'
 
 import { getChannels, getCurrentChannel } from 'selectors'
 
 export const getCurrentChannelName = createSelector(
   getChannels,
   getCurrentChannel,
-  (channels, currentChannel) => channels.find(({ id }) => id === currentChannel)
+  (channels, currentChannel) =>
+    get(channels.find(({ id }) => id === currentChannel), 'name')
 )
