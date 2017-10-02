@@ -1,24 +1,22 @@
 export default {
   container: {
-    paddingLeft: 2,
+    display: 'block',
     width: '100%',
     margin: '0 auto -1px',
     color: '#2C2D30',
     borderTop: '1px solid transparent',
     borderBottom: '1px solid transparent',
     fontSize: 15,
-    lineHeight: 22,
+    lineHeight: '22px',
     userSelect: 'text',
     wordWrap: 'break-word',
     padding: '1px 40px 2px 0',
   },
   timestamp: {
+    display: 'flex',
     width: 70,
-    paddingRight: 4,
-    textAlign: 'right',
     position: 'absolute',
-    top: 0,
-    left: 0,
+    margin: '3px 15px',
     color: '#555459',
     opacity: 1,
     fontSize: 12,
@@ -37,6 +35,7 @@ export default {
     wordBreak: 'break-word',
   },
   body: {
+    display: 'inline',
     cursor: 'text',
   },
 }
