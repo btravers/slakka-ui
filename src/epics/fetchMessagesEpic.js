@@ -13,7 +13,10 @@ export default (action$, { getState }) =>
       ajax.getJSON(
         `http://${host}:${port}/api/channels/${getCurrentChannel(
           getState()
-        )}/messages`
+        )}/messages`,
+        {
+          Authorization: localStorage.getItem('jwt'),
+        }
       )
     )
     .map(response => fetchMessagesFulfilled(response))

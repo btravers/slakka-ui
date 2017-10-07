@@ -1,40 +1,21 @@
-import React, { PureComponent } from 'react'
-import { connect } from 'react-redux'
-import { Dimmer, Loader } from 'semantic-ui-react'
+import React from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import { initialize } from 'actions'
-import { isReady } from 'selectors'
-import ChannelsList from './ChannelsList'
+import LoginForm from './LoginForm'
 import Main from './Main'
+import Loader from './Loader'
 import styles from './styles'
 
-class App extends PureComponent {
-  componentDidMount() {
-    const { initialize } = this.props
-    initialize()
-  }
-
-  render() {
-    const { isReady } = this.props
-
-    return (
+const App = () => {
+  return (
+    <Router>
       <div style={styles.container}>
-        {isReady || (
-          <Dimmer active>
-            <Loader size="massive">Loading</Loader>
-          </Dimmer>
-        )}
-        <ChannelsList />
-        <Main />
+        <Loader />
+        <Route exact path="/" component={Main} />
+        <Route path="/login" component={LoginForm} />
       </div>
-    )
-  }
+    </Router>
+  )
 }
 
-const mapStateToPros = state => {
-  return {
-    isReady: isReady(state),
-  }
-}
-
-export default connect(mapStateToPros, { initialize })(App)
+export default App

@@ -15,7 +15,10 @@ export default (action$, { getState }) =>
           getState()
         )}/messages`,
         payload,
-        { 'Content-Type': 'application/json' }
+        {
+          Authorization: localStorage.getItem('jwt'),
+          'Content-Type': 'application/json',
+        }
       )
     )
     .ignoreElements()

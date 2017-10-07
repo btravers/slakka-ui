@@ -28,4 +28,5 @@ export default action$ =>
           .map(() => ready())
       )
     )
+    .catch(() => ready())
     .mergeAll()
