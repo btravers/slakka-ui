@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux'
+import { routerReducer as router } from 'react-router-redux'
 
 import busy from './busy'
 import channels from './channels'
@@ -12,4 +13,5 @@ export default combineReducers({
   currentChannel,
   messages,
   ready,
+  router,
 })

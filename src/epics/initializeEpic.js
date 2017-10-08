@@ -11,6 +11,7 @@ import {
 export default action$ =>
   action$
     .ofType(INITIALIZE)
+    .throttle(ev => Observable.interval(1000))
     .map(() =>
       Observable.merge(
         Observable.of(fetchChannels()),
@@ -28,5 +29,4 @@ export default action$ =>
           .map(() => ready())
       )
     )
-    .catch(() => ready())
     .mergeAll()

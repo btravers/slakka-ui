@@ -1,4 +1,6 @@
+import { Observable } from 'rxjs/Rx'
 import { ajax } from 'rxjs/observable/dom/ajax'
+import { push } from 'react-router-redux'
 
 import { fetchChannelsFulfilled, FETCH_CHANNELS } from 'actions'
 import config from 'config'
@@ -14,3 +16,7 @@ export default action$ =>
       })
     )
     .map(response => fetchChannelsFulfilled(response))
+    .catch(
+      ({ status }) =>
+        status === 401 ? Observable.of(push('/login')) : Observable.of('/error')
+    )

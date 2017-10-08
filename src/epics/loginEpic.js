@@ -1,6 +1,8 @@
+import { Observable } from 'rxjs/Rx'
 import { ajax } from 'rxjs/observable/dom/ajax'
+import { push } from 'react-router-redux'
 
-import { LOGIN } from 'actions'
+import { LOGIN, initialize } from 'actions'
 import config from 'config'
 
 const { serverHost: host, serverPort: port } = config
@@ -18,5 +20,6 @@ export default action$ =>
         'jwt',
         response.xhr.getResponseHeader('access-token')
       )
-      return { type: 'DONE' }
+      return Observable.of(push('/'), initialize())
     })
+    .mergeAll()
